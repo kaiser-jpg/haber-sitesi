@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gündem Haberleri - Haber Portalı</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .navbar {
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d) !important;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff !important;
+            text-shadow: 0 0 10px rgba(255,255,255,0.3);
+        }
+        .nav-link {
+            color: #ffffff !important;
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #007bff !important;
+            transform: translateY(-2px);
+        }
+        .news-section {
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+            border-radius: 15px;
+            padding: 60px 0;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .news-card {
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+        .news-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .news-title {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        .news-meta {
+            color: #a0a0a0;
+            margin-bottom: 20px;
+        }
+        .news-content {
+            color: #ffffff;
+            line-height: 1.8;
+        }
+        .category-badge {
+            background: linear-gradient(45deg, #dc3545, #c82333);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        .section-title {
+            border-left: 4px solid #dc3545;
+            padding-left: 15px;
+            margin: 30px 0;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255,255,255,0.2);
+        }
+        .footer {
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+            color: white;
+            padding: 40px 0;
+            margin-top: 30px;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
+        }
+        .animate__animated {
+            animation-duration: 1s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">HABER PORTALI</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="products.html">Kategoriler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Haber Bölümü -->
+    <div class="container">
+        <div class="news-section">
+            <h2 class="section-title animate__animated animate__fadeIn">Gündem Haberleri</h2>
+            
+            <div class="row">
+                <div class="col-lg-8 animate__animated animate__fadeInLeft">
+                    <div class="news-card">
+                        <span class="category-badge">Gündem</span>
+                        <img src="data:image/jpeg;base64,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" alt="Cumhurbaşkanı" class="news-image">
+                        <h1 class="news-title">Cumhurbaşkanı'ndan Önemli Açıklamalar</h1>
+                        <div class="news-meta">
+                            <i class="far fa-calendar-alt"></i> 15 Mart 2024
+                            <i class="far fa-user ml-3"></i> Siyaset Editörü
+                        </div>
+                        <div class="news-content">
+                            <p>Cumhurbaşkanı, bugün düzenlediği basın toplantısında önemli açıklamalarda bulundu. Ekonomi, dış politika ve iç güvenlik konularında detaylı bilgiler veren Cumhurbaşkanı, yeni dönemde atılacak adımları kamuoyuyla paylaştı.</p>
+                            
+                            <p>Ekonomi alanında yeni teşvik paketlerinin açıklanacağını belirten Cumhurbaşkanı, "Üretimi artırmak ve istihdamı desteklemek için kapsamlı bir program hazırladık" dedi.</p>
+                            
+                            <p>Dış politika konusunda komşu ülkelerle ilişkilerin güçlendirileceğini vurgulayan Cumhurbaşkanı, bölgesel barış ve istikrar için çalışmaların sürdürüleceğini ifade etti.</p>
+                            
+                            <p>İç güvenlik konusunda ise terörle mücadele konusundaki kararlılığın devam edeceğini belirten Cumhurbaşkanı, vatandaşların güvenliği için gerekli tüm önlemlerin alındığını kaydetti.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 animate__animated animate__fadeInRight">
+                    <div class="news-card">
+                        <h3 class="mb-4">Diğer Gündem Haberleri</h3>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-secondary">
+                                <h5 class="mb-1">Yeni Yasal Düzenlemeler Açıklandı</h5>
+                                <small class="text-muted">2 saat önce</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-secondary">
+                                <h5 class="mb-1">Bakanlar Kurulu Toplantısı</h5>
+                                <small class="text-muted">4 saat önce</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-secondary">
+                                <h5 class="mb-1">Yeni Projeler Tanıtıldı</h5>
+                                <small class="text-muted">1 gün önce</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Hakkımızda</h5>
+                    <p>Güncel haberleri sizlerle buluşturuyoruz.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Hızlı Bağlantılar</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Ana Sayfa</a></li>
+                        <li><a href="products.html" class="text-white">Kategoriler</a></li>
+                        <li><a href="about.html" class="text-white">Hakkımızda</a></li>
+                        <li><a href="contact.html" class="text-white">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Bizi Takip Edin</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white mr-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white mr-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white mr-2"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html> 

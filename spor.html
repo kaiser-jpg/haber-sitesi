@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spor Haberleri - Haber Portalı</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .navbar {
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d) !important;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff !important;
+            text-shadow: 0 0 10px rgba(255,255,255,0.3);
+        }
+        .nav-link {
+            color: #ffffff !important;
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #007bff !important;
+            transform: translateY(-2px);
+        }
+        .news-section {
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+            border-radius: 15px;
+            padding: 60px 0;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .news-card {
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+        .news-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .news-title {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        .news-meta {
+            color: #a0a0a0;
+            margin-bottom: 20px;
+        }
+        .news-content {
+            color: #ffffff;
+            line-height: 1.8;
+        }
+        .category-badge {
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        .section-title {
+            border-left: 4px solid #007bff;
+            padding-left: 15px;
+            margin: 30px 0;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255,255,255,0.2);
+        }
+        .footer {
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+            color: white;
+            padding: 40px 0;
+            margin-top: 30px;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
+        }
+        .animate__animated {
+            animation-duration: 1s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">HABER PORTALI</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="products.html">Kategoriler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Haber Bölümü -->
+    <div class="container">
+        <div class="news-section">
+            <h2 class="section-title animate__animated animate__fadeIn">Spor Haberleri</h2>
+            
+            <div class="row">
+                <div class="col-lg-8 animate__animated animate__fadeInLeft">
+                    <div class="news-card">
+                        <span class="category-badge">Spor</span>
+                        <img src="https://via.placeholder.com/1200x600" alt="Cavit Akın Karagöz" class="news-image" style="width: 100%; height: auto; max-width: 1200px;">
+                        <h1 class="news-title">Galatasaray'ın Yıldızı Cavit Akın Karagöz Arsenal'e Transfer Oldu!</h1>
+                        <div class="news-meta">
+                            <i class="far fa-calendar-alt"></i> 15 Mart 2024
+                            <i class="far fa-user ml-3"></i> Spor Editörü
+                        </div>
+                        <div class="news-content">
+                            <p>Premier Lig'in güçlü ekiplerinden Arsenal, Galatasaray'ın yıldız orta saha oyuncusu Cavit Akın Karagöz'ü kadrosuna kattı. 65 milyon euro karşılığında gerçekleşen transfer, Türk futbol tarihinin en yüksek transfer bedellerinden biri olarak kayıtlara geçti.</p>
+                            
+                            <p>22 yaşındaki Karagöz, Galatasaray formasıyla geçtiğimiz sezon 13 gol ve 25 asistlik etkileyici bir performans sergiledi. Arsenal'in teknik direktörü Mikel Arteta, transfer sonrası yaptığı açıklamada, "Cavit Akın Karagöz, takımımıza büyük katkı sağlayacak yetenekte bir oyuncu. Genç yaşına rağmen gösterdiği performans ve potansiyeli bizi çok etkiledi" dedi.</p>
+                            
+                            <p>Karagöz ise, "Galatasaray'da geçirdiğim harika yılların ardından Arsenal gibi büyük bir kulüpte oynamak benim için büyük bir gurur. Burada başarılı olmak için elimden geleni yapacağım" şeklinde konuştu.</p>
+                            
+                            <p>Galatasaray'ın yetiştirdiği ve son iki sezonda gösterdiği performansla dikkatleri üzerine çeken Karagöz, yeni sezonda Arsenal formasıyla Premier Lig'de mücadele edecek.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 animate__animated animate__fadeInRight">
+                    <div class="news-card">
+                        <h3 class="mb-4">Diğer Spor Haberleri</h3>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-secondary">
+                                <h5 class="mb-1">Galatasaray Şampiyonlar Ligi'nde</h5>
+                                <small class="text-muted">2 saat önce</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-secondary">
+                                <h5 class="mb-1">Fenerbahçe'den Yeni Transfer</h5>
+                                <small class="text-muted">5 saat önce</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-secondary">
+                                <h5 class="mb-1">Beşiktaş'ta Teknik Direktör Değişikliği</h5>
+                                <small class="text-muted">1 gün önce</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Hakkımızda</h5>
+                    <p>Güncel haberleri sizlerle buluşturuyoruz.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Hızlı Bağlantılar</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Ana Sayfa</a></li>
+                        <li><a href="products.html" class="text-white">Kategoriler</a></li>
+                        <li><a href="about.html" class="text-white">Hakkımızda</a></li>
+                        <li><a href="contact.html" class="text-white">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Bizi Takip Edin</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white mr-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white mr-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white mr-2"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html> 

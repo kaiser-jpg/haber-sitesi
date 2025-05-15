@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategoriler - Haber Portalı</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .navbar {
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d) !important;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff !important;
+            text-shadow: 0 0 10px rgba(255,255,255,0.3);
+        }
+        .nav-link {
+            color: #ffffff !important;
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #007bff !important;
+            transform: translateY(-2px);
+        }
+        .category-section {
+            padding: 60px 0;
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .category-card {
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+            border: none;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+        .category-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #007bff;
+            transition: all 0.3s ease;
+        }
+        .category-card:hover .category-icon {
+            transform: scale(1.2);
+            color: #0056b3;
+        }
+        .category-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        .category-description {
+            color: #a0a0a0;
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            border: none;
+            transition: all 0.3s ease;
+            border-radius: 25px;
+            padding: 10px 25px;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,123,255,0.4);
+        }
+        .footer {
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+            color: white;
+            padding: 40px 0;
+            margin-top: 30px;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
+        }
+        .section-title {
+            border-left: 4px solid #007bff;
+            padding-left: 15px;
+            margin: 30px 0;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255,255,255,0.2);
+        }
+        .animate__animated {
+            animation-duration: 1s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">HABER PORTALI</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="products.html">Kategoriler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Kategori Bölümü -->
+    <div class="container">
+        <div class="category-section">
+            <h2 class="section-title animate__animated animate__fadeIn">Kategoriler</h2>
+            <p class="lead text-light mb-5 animate__animated animate__fadeIn">İlgilendiğiniz kategorideki haberleri okuyun.</p>
+            
+            <div class="row">
+                <div class="col-md-4 animate__animated animate__fadeInUp">
+                    <div class="category-card">
+                        <i class="fas fa-newspaper category-icon"></i>
+                        <h3 class="category-title">Gündem</h3>
+                        <p class="category-description">Güncel haberler ve son dakika gelişmeleri.</p>
+                        <a href="gundem.html" class="btn btn-primary">Haberlere Git</a>
+                    </div>
+                </div>
+                <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
+                    <div class="category-card">
+                        <i class="fas fa-futbol category-icon"></i>
+                        <h3 class="category-title">Spor</h3>
+                        <p class="category-description">Futbol, basketbol ve diğer spor dallarından haberler.</p>
+                        <a href="spor.html" class="btn btn-primary">Haberlere Git</a>
+                    </div>
+                </div>
+                <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
+                    <div class="category-card">
+                        <i class="fas fa-chart-line category-icon"></i>
+                        <h3 class="category-title">Ekonomi</h3>
+                        <p class="category-description">Ekonomi ve finans dünyasından son gelişmeler.</p>
+                        <a href="ekonomi.html" class="btn btn-primary">Haberlere Git</a>
+                    </div>
+                </div>
+                <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.6s">
+                    <div class="category-card">
+                        <i class="fas fa-flask category-icon"></i>
+                        <h3 class="category-title">Bilim</h3>
+                        <p class="category-description">Bilim ve teknoloji dünyasından yenilikler.</p>
+                        <a href="bilim.html" class="btn btn-primary">Haberlere Git</a>
+                    </div>
+                </div>
+                <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.8s">
+                    <div class="category-card">
+                        <i class="fas fa-theater-masks category-icon"></i>
+                        <h3 class="category-title">Kültür-Sanat</h3>
+                        <p class="category-description">Sanat ve kültür dünyasından haberler.</p>
+                        <a href="kultur-sanat.html" class="btn btn-primary">Haberlere Git</a>
+                    </div>
+                </div>
+                <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 1s">
+                    <div class="category-card">
+                        <i class="fas fa-globe-americas category-icon"></i>
+                        <h3 class="category-title">Dünya</h3>
+                        <p class="category-description">Dünyadan önemli gelişmeler ve haberler.</p>
+                        <a href="dunya.html" class="btn btn-primary">Haberlere Git</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Hakkımızda</h5>
+                    <p>Güncel haberleri sizlerle buluşturuyoruz.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Hızlı Bağlantılar</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Ana Sayfa</a></li>
+                        <li><a href="products.html" class="text-white">Kategoriler</a></li>
+                        <li><a href="about.html" class="text-white">Hakkımızda</a></li>
+                        <li><a href="contact.html" class="text-white">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Bizi Takip Edin</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white mr-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white mr-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white mr-2"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html> 

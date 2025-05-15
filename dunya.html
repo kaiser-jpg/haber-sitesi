@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dünya Haberleri - Haber Portalı</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .navbar {
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d) !important;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff !important;
+            text-shadow: 0 0 10px rgba(255,255,255,0.3);
+        }
+        .nav-link {
+            color: #ffffff !important;
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #007bff !important;
+            transform: translateY(-2px);
+        }
+        .news-section {
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+            border-radius: 15px;
+            padding: 60px 0;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .news-card {
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+        .news-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .news-title {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        .news-meta {
+            color: #a0a0a0;
+            margin-bottom: 20px;
+        }
+        .news-content {
+            color: #ffffff;
+            line-height: 1.8;
+        }
+        .category-badge {
+            background: linear-gradient(45deg, #fd7e14, #e36209);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        .section-title {
+            border-left: 4px solid #fd7e14;
+            padding-left: 15px;
+            margin: 30px 0;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255,255,255,0.2);
+        }
+        .footer {
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+            color: white;
+            padding: 40px 0;
+            margin-top: 30px;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
+        }
+        .animate__animated {
+            animation-duration: 1s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">HABER PORTALI</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="products.html">Kategoriler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Haber Bölümü -->
+    <div class="container">
+        <div class="news-section">
+            <h2 class="section-title animate__animated animate__fadeIn">Dünya Haberleri</h2>
+            
+            <div class="row">
+                <div class="col-lg-8 animate__animated animate__fadeInLeft">
+                    <div class="news-card">
+                        <span class="category-badge">Dünya</span>
+                        <img src="data:image/jpeg;base64,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" alt="BM Zirvesi" class="news-image">
+                        <h1 class="news-title">BM'den İklim Değişikliği Konusunda Tarihi Anlaşma</h1>
+                        <div class="news-meta">
+                            <i class="far fa-calendar-alt"></i> 15 Mart 2024
+                            <i class="far fa-user ml-3"></i> Dünya Editörü
+                        </div>
+                        <div class="news-content">
+                            <p>Birleşmiş Milletler İklim Değişikliği Konferansı'nda (COP29) tarihi bir anlaşmaya imza atıldı. 195 ülkenin katıldığı zirvede, küresel sıcaklık artışını 1.5 derece ile sınırlandırmak için yeni hedefler belirlendi.</p>
+                            
+                            <p>BM Genel Sekreteri, "Bu anlaşma, insanlık için bir dönüm noktasıdır. Artık tüm ülkeler, iklim değişikliğiyle mücadele konusunda somut adımlar atacak" dedi.</p>
+                            
+                            <p>Anlaşma kapsamında, gelişmiş ülkeler 2030 yılına kadar karbon emisyonlarını yüzde 50 azaltmayı taahhüt ederken, gelişmekte olan ülkelere yıllık 100 milyar dolar finansal destek sağlanacak.</p>
+                            
+                            <p>Uzmanlar, bu anlaşmanın küresel ısınmayı durdurmak için kritik bir adım olduğunu belirtirken, uygulamanın başarısı için tüm ülkelerin işbirliği yapması gerektiğini vurguluyor.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 animate__animated animate__fadeInRight">
+                    <div class="news-card">
+                        <h3 class="mb-4">Diğer Dünya Haberleri</h3>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-secondary">
+                                <h5 class="mb-1">Avrupa Birliği'nden Yeni Ekonomi Paketi</h5>
+                                <small class="text-muted">3 saat önce</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-secondary">
+                                <h5 class="mb-1">Asya-Pasifik Bölgesinde Ticaret Anlaşması</h5>
+                                <small class="text-muted">6 saat önce</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-secondary">
+                                <h5 class="mb-1">Afrika'da Barış Görüşmeleri</h5>
+                                <small class="text-muted">1 gün önce</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Hakkımızda</h5>
+                    <p>Güncel haberleri sizlerle buluşturuyoruz.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Hızlı Bağlantılar</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Ana Sayfa</a></li>
+                        <li><a href="products.html" class="text-white">Kategoriler</a></li>
+                        <li><a href="about.html" class="text-white">Hakkımızda</a></li>
+                        <li><a href="contact.html" class="text-white">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Bizi Takip Edin</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white mr-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white mr-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white mr-2"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html> 

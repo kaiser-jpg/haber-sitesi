@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kültür-Sanat Haberleri - Haber Portalı</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .navbar {
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d) !important;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff !important;
+            text-shadow: 0 0 10px rgba(255,255,255,0.3);
+        }
+        .nav-link {
+            color: #ffffff !important;
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #007bff !important;
+            transform: translateY(-2px);
+        }
+        .news-section {
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+            border-radius: 15px;
+            padding: 60px 0;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .news-card {
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+        .news-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .news-title {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        .news-meta {
+            color: #a0a0a0;
+            margin-bottom: 20px;
+        }
+        .news-content {
+            color: #ffffff;
+            line-height: 1.8;
+        }
+        .category-badge {
+            background: linear-gradient(45deg, #6f42c1, #563d7c);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        .section-title {
+            border-left: 4px solid #6f42c1;
+            padding-left: 15px;
+            margin: 30px 0;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255,255,255,0.2);
+        }
+        .footer {
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+            color: white;
+            padding: 40px 0;
+            margin-top: 30px;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
+        }
+        .animate__animated {
+            animation-duration: 1s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">HABER PORTALI</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="products.html">Kategoriler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Haber Bölümü -->
+    <div class="container">
+        <div class="news-section">
+            <h2 class="section-title animate__animated animate__fadeIn">Kültür-Sanat Haberleri</h2>
+            
+            <div class="row">
+                <div class="col-lg-8 animate__animated animate__fadeInLeft">
+                    <div class="news-card">
+                        <span class="category-badge">Kültür-Sanat</span>
+                        <img src="data:image/png;base64,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" alt="İstanbul Bienali" class="news-image">
+                        <h1 class="news-title">İstanbul Bienali'nde Türk Sanatçıların Başarısı</h1>
+                        <div class="news-meta">
+                            <i class="far fa-calendar-alt"></i> 15 Mart 2024
+                            <i class="far fa-user ml-3"></i> Kültür-Sanat Editörü
+                        </div>
+                        <div class="news-content">
+                            <p>17. İstanbul Bienali'nde Türk sanatçıların eserleri büyük beğeni topladı. Bienal kapsamında sergilenen 150 eserden 45'i Türk sanatçılara ait. Uluslararası sanat eleştirmenleri, Türk sanatçıların eserlerini "çağdaş sanatın sınırlarını zorlayan" olarak nitelendirdi.</p>
+                            
+                            <p>Bienal Direktörü, "Türk sanatçıların bu yılki performansı gerçekten etkileyici. Özellikle dijital sanat ve enstalasyon alanındaki çalışmalar, uluslararası sanat camiasında büyük ilgi gördü" dedi.</p>
+                            
+                            <p>Bienal kapsamında düzenlenen sergiler, performanslar ve atölye çalışmaları, sanatseverlerin yoğun ilgisiyle karşılaştı. Özellikle genç sanatçıların eserleri, yeni nesil sanat anlayışını yansıtması açısından öne çıktı.</p>
+                            
+                            <p>Bienal, 30 Nisan'a kadar devam edecek ve bu süre içinde çeşitli sanat etkinlikleri, söyleşiler ve workshoplar düzenlenecek.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 animate__animated animate__fadeInRight">
+                    <div class="news-card">
+                        <h3 class="mb-4">Diğer Kültür-Sanat Haberleri</h3>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-secondary">
+                                <h5 class="mb-1">Yeni Açılan Modern Sanat Müzesi</h5>
+                                <small class="text-muted">2 saat önce</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-secondary">
+                                <h5 class="mb-1">Uluslararası Film Festivali Başlıyor</h5>
+                                <small class="text-muted">5 saat önce</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-secondary">
+                                <h5 class="mb-1">Türk Edebiyatının Yeni Yıldızı</h5>
+                                <small class="text-muted">1 gün önce</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Hakkımızda</h5>
+                    <p>Güncel haberleri sizlerle buluşturuyoruz.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Hızlı Bağlantılar</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Ana Sayfa</a></li>
+                        <li><a href="products.html" class="text-white">Kategoriler</a></li>
+                        <li><a href="about.html" class="text-white">Hakkımızda</a></li>
+                        <li><a href="contact.html" class="text-white">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Bizi Takip Edin</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white mr-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white mr-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white mr-2"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html> 

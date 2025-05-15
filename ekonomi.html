@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Güncel ekonomi haberleri, finans piyasaları, döviz kurları ve ekonomi gündemi">
+    <title>Ekonomi Haberleri | Güncel Ekonomi Haberleri ve Finans Piyasaları</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .navbar {
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d) !important;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff !important;
+            text-shadow: 0 0 10px rgba(255,255,255,0.3);
+        }
+        .nav-link {
+            color: #ffffff !important;
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #007bff !important;
+            transform: translateY(-2px);
+        }
+        .news-section {
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+            border-radius: 15px;
+            padding: 60px 0;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .news-card {
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+        .news-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .news-title {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        .news-meta {
+            color: #a0a0a0;
+            margin-bottom: 20px;
+        }
+        .news-content {
+            color: #ffffff;
+            line-height: 1.8;
+        }
+        .category-badge {
+            background: linear-gradient(45deg, #28a745, #1e7e34);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        .section-title {
+            border-left: 4px solid #28a745;
+            padding-left: 15px;
+            margin: 30px 0;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255,255,255,0.2);
+        }
+        .footer {
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+            color: white;
+            padding: 40px 0;
+            margin-top: 30px;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
+        }
+        .animate__animated {
+            animation-duration: 1s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">HABER PORTALI</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="kategoriler.html">Kategoriler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Haber Bölümü -->
+    <div class="container">
+        <div class="news-section">
+            <h2 class="section-title animate__animated animate__fadeIn">Ekonomi Haberleri</h2>
+            
+            <div class="row">
+                <div class="col-lg-8 animate__animated animate__fadeInLeft">
+                    <div class="news-card">
+                        <span class="category-badge">Ekonomi</span>
+                        <img src="data:image/jpeg;base64,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" alt="Merkez Bankası" class="news-image">
+                        <h1 class="news-title">Merkez Bankası'ndan Önemli Faiz Kararı</h1>
+                        <div class="news-meta">
+                            <i class="far fa-calendar-alt"></i> 15 Mart 2024
+                            <i class="far fa-user ml-3"></i> Ekonomi Editörü
+                        </div>
+                        <div class="news-content">
+                            <p>Türkiye Cumhuriyet Merkez Bankası (TCMB), Para Politikası Kurulu toplantısında politika faizini 500 baz puan artırarak yüzde 45'e yükseltti. Bu karar, piyasalarda beklenenin üzerinde bir artış olarak değerlendirildi.</p>
+                            
+                            <p>Merkez Bankası Başkanı, karar sonrası yaptığı açıklamada, "Enflasyonla mücadele konusundaki kararlılığımızı sürdürüyoruz. Bu karar, fiyat istikrarını sağlamak için atılan önemli bir adımdır" dedi.</p>
+                            
+                            <p>Ekonomistler, bu kararın piyasalar üzerinde olumlu etki yaratacağını ve enflasyon beklentilerinin aşağı yönlü revize edileceğini belirtiyor.</p>
+                            
+                            <p>Dolar/TL kuru, karar sonrası 31.50 seviyesinden 31.20 seviyesine geriledi. Borsa İstanbul'da BIST 100 endeksi ise yüzde 2.5 değer kazandı.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 animate__animated animate__fadeInRight">
+                    <div class="news-card">
+                        <h3 class="mb-4">Diğer Ekonomi Haberleri</h3>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-secondary">
+                                <h5 class="mb-1">Döviz Kurlarında Son Durum</h5>
+                                <small class="text-muted">1 saat önce</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-secondary">
+                                <h5 class="mb-1">Borsa İstanbul'da Rekor</h5>
+                                <small class="text-muted">3 saat önce</small>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action bg-dark text-white border-secondary">
+                                <h5 class="mb-1">Yeni Ekonomi Paketi Açıklandı</h5>
+                                <small class="text-muted">1 gün önce</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Hakkımızda</h5>
+                    <p>Güncel haberleri sizlerle buluşturuyoruz.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Hızlı Bağlantılar</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Ana Sayfa</a></li>
+                        <li><a href="kategoriler.html" class="text-white">Kategoriler</a></li>
+                        <li><a href="about.html" class="text-white">Hakkımızda</a></li>
+                        <li><a href="contact.html" class="text-white">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Bizi Takip Edin</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white mr-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white mr-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white mr-2"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html> 
